@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "108411675513",
+    "firebase_url": "https://emergency-app-a1e6f.firebaseio.com",
+    "project_id": "emergency-app-a1e6f",
+    "storage_bucket": "emergency-app-a1e6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108411675513:android:498da5d6f10f4ba0",
+        "android_client_info": {
+          "package_name": "thedorkknightrises.emergencyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108411675513-doircd3nspqf3bupnq1qojtj9v7o3smp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "thedorkknightrises.emergencyapp",
+            "certificate_hash": "3F1250DDEFE6C8B39F6BE8006DFC8FC83BE5A79F"
+          }
+        },
+        {
+          "client_id": "108411675513-bq341uh4oeu33mqvjpsd62g1h4j71hve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlNJAZ3Ah8kftFVvKf52wB3TnwX5L75dg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108411675513-bq341uh4oeu33mqvjpsd62g1h4j71hve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
