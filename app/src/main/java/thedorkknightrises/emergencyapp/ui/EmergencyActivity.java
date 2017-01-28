@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -120,14 +121,15 @@ public class EmergencyActivity extends AppCompatActivity {
                 holder = new ExpandableListAdapter.ViewHolder();
 
                 holder.text = (TextView) convertView.findViewById(R.id.lblListItem);
-                holder.text.setBackgroundColor(getResources().getColor(R.color.colorTranslucent));
+                //holder.text.setBackgroundColor(getResources().getColor(R.color.colorTranslucent));
                 convertView.setTag(holder);
             } else {
                 holder = (ExpandableListAdapter.ViewHolder) convertView.getTag();
             }
 
             holder.text.setText(getChild(groupPosition, childPosition).toString());
-            holder.text.setTextColor(Color.BLACK);
+            //holder.text.setTextColor(Color.BLACK);
+            holder.text.setAutoLinkMask(Linkify.PHONE_NUMBERS);
 
             return convertView;
         }

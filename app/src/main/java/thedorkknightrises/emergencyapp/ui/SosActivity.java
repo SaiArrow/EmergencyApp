@@ -37,18 +37,6 @@ public class SosActivity extends AppCompatActivity {
 
             }
         });
-        butto=(ImageButton)findViewById(R.id.button3);
-        butto.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view) {
-
-            }
-
-
-        });
-
-
 
     }
 

@@ -9,7 +9,6 @@ import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.IdpResponse;
 import com.firebase.ui.auth.ResultCodes;
-import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Arrays;
 
@@ -27,11 +26,11 @@ public class SignInActivity  extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         startActivityForResult(
                 AuthUI.getInstance()
                 .createSignInIntentBuilder()
                 .setIsSmartLockEnabled(false)
+                        .setTheme(R.style.AppTheme_NoActionBar)
                 .setProviders(Arrays.asList(
                         new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
                         new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
