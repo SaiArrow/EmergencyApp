@@ -24,20 +24,24 @@
         </activity>
         <activity android:name=".ui.MainActivity2"
             android:label="Main"
+            android:theme="@style/AppTheme"
             >
         </activity>
         <activity android:name=".ui.MainActivity"
             android:label="SignIn"
+            android:theme="@style/AppTheme"
             >
 
         </activity>
         <activity android:name=".ui.EmergencyActivity"
             android:label="Emergency Contacts"
+            android:theme="@style/AppTheme"
             >
 
     </activity>
         <activity android:name=".ui.feed.FeedActivity"
             android:label="News Feed"
+            android:theme="@style/AppTheme"
             >
 
     </activity>
@@ -54,10 +58,12 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ui.MapActivity"
-            android:label="@string/title_activity_map"></activity>
+            android:name=".ui.maps.MapActivity"
+            android:label="@string/title_activity_map"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".ui.SignInActivity"
-            android:parentActivityName=".ui.MainActivity"/>
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme"/>
 
     </application>
 

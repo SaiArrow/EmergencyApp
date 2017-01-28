@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
@@ -17,26 +18,19 @@ import thedorkknightrises.emergencyapp.R;
 public class EmergencyActivity extends AppCompatActivity {
 
 
-    Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_emer);
-
-    ExpandableListView faqListView = (ExpandableListView) findViewById(R.id.list_faq);
+    Toolbar toolbar;
+    ExpandableListView faqListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergencycontact);
 
+        toolbar = (Toolbar)findViewById(R.id.toolbar_emer);
+        faqListView  = (ExpandableListView) findViewById(R.id.list_faq);
         setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setTitleTextColor(Color.WHITE);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle("Help");
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                finish();
-            }
-        });
         String[] groups = new String[0];
         String[][] children = new String[0][0];
 
@@ -55,6 +49,20 @@ public class EmergencyActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 
     public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
