@@ -17,4 +17,29 @@
     <string name="title_activity_register">Register</string>
     <string name="title_activity_session_manager">SessionManager</string>
     <string name="title_activity_about_ncw">AboutNCWActivity</string>
+    <string name="air2">3.Two Air India flights from Pune to New Delhi were cancelled for two successive days due to unspecified technical issues following which passengers were shifted to another flight this evening.
+</string>
+<string name="air1">2.Heavy rains lashed Mumbai and its suburbs on Friday throwing the city out of gear. Heavy traffic snarls have been reported from several places across the city.
+All flights arriving to and departing from Mumbai have been delayed. Also, all trains moving from Thane station to CST have been delayed.
+</string>
+    <string name="air">1.After fliers’ first brush with fog-induced disruptions in north India this winter on Thursday, more than 100 fliers who were to travel to Goa on an IndiGo Airlines flight were held up at the city airport for almost five hours.
+ This, the officials said, was a cascading effect of the airline schedules disrupted due to poor visibility in the north.
+</string>
+<string name="train">1.Around 20 trains were cancelled and 58 were diverted today as railway traffic on the Delhi-Kanpur section was disrupted due to the derailment of Sealdah-Ajmer Express near Rura station.
+  A senior Railway Ministry official said four trains were also short terminated due to the derailment near Kanpur.
+</string>
+    <string name="train1">2.The nationwide strike call against demonetisation evoked mixed reaction in Bihar where workers of RJD,
+ Congress and Left parties disrupted train services at many places but offices and schools registered normal attendance.</string>
+    <string name="train2">3.An unclaimed object in a local train triggered a bomb scare tonight at the busy Howrah station,
+ prompting Eastern Railway officials to shut down local train operations temporarily.</string>
+    <string name="road">1.Water Logging was reported from Malji Rathod Chowk BPT colony, Sion, King Circle, Hind Matha, Pratiksha Nagar and National college.</string>
+    <string name="road1">2.Heavy traffic jam is seen near Lilavati Hospital in Bandra, Western Express highway, Eastern Freeway and Dadar.</string>
+    <string name="road2">3.Two persons were killed and three others injured in a freak accident that involved an explosion in a moving chemical tanker and
+subsequent pile-up of three vehicles on the Mumbai-Ahmedabad Highway today, causing massive disruption of traffic for hours.
+Railway</string>
+
+
+
+
+
 </resources>

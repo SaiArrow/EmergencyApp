@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/air"
+        android:id="@+id/textView"
+        android:textSize="15dp"
+        />
+
+    <View
+        android:layout_width="448dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_alignBottom="@+id/textView"
+        android:id="@+id/View"
+        />
+    <TextView
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/air1"
+        android:id="@+id/textView1"
+        android:textSize="15dp"
+        android:layout_below="@+id/View"
+        />
+    <View
+        android:layout_width="448dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/textView1"
+        android:id="@+id/View1"
+        />
+    <TextView
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/air2"
+        android:id="@+id/textView2"
+        android:textSize="15dp"
+        android:layout_below="@+id/View1"
+        />
+</RelativeLayout>
