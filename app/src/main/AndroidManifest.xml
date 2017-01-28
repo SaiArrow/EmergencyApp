@@ -36,8 +36,11 @@
         <activity android:name=".ui.EmergencyActivity"
             android:label="Emergency Contacts"
             android:theme="@style/AppTheme"
+            > </activity>
+        <activity android:name=".ui.ActivitySos2"
+            android:label="SOS"
+            android:theme="@style/AppTheme"
             >
-
     </activity>
         <activity android:name=".ui.feed.FeedActivity"
             android:label="News Feed"
