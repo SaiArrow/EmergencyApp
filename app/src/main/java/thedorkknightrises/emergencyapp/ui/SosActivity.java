@@ -14,6 +14,7 @@ import thedorkknightrises.emergencyapp.R;
 public class SosActivity extends AppCompatActivity {
 
     Button button;
+    ImageButton button4;
     ImageButton butto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +28,22 @@ public class SosActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.svg_clear_white_36px);
 
         button=(Button)findViewById(R.id.button2);
-
+        button4=(ImageButton)findViewById(R.id.imageButton1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(SosActivity.this,EmergencyActivity.class);
                 startActivity(myIntent);
+
+
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent99 = new Intent(SosActivity.this,ActivitySos2.class);
+                startActivity(myIntent99);
 
 
             }
