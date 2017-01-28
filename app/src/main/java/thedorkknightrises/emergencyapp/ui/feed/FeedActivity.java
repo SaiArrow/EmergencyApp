@@ -53,13 +53,13 @@ public class FeedActivity extends AppCompatActivity {
 
 
         int i = 0;
-        FeedItem FeedItem = new FeedItem(s[i], s[i + 1], R.drawable.batman);
+        FeedItem FeedItem = new FeedItem(s[i], s[i + 1], R.drawable.coldwave);
         FeedItemArrayList.add(FeedItem);
         i = 2;
-        FeedItem FeedItem1 = new FeedItem(s[i], s[i + 1], R.drawable.batman);
+        FeedItem FeedItem1 = new FeedItem(s[i], s[i + 1], R.drawable.flood);
         FeedItemArrayList.add(FeedItem1);
         i = 4;
-        FeedItem FeedItem2 = new FeedItem(s[i], s[i + 1], R.drawable.batman);
+        FeedItem FeedItem2 = new FeedItem(s[i], s[i + 1], R.drawable.fire);
         FeedItemArrayList.add(FeedItem2);
         recyclerAdapterNews = new RecyclerAdapterNews(getApplicationContext(), FeedItemArrayList);
 
