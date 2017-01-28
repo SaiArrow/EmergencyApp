@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="136dp"
+        android:layout_height="105dp"
+        android:src="@drawable/batman"
+        android:id="@+id/imageView2"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView2"
+        android:paddingLeft="90dp"
+        android:paddingTop="40dp"
+        android:text="CRP"
+        android:textSize="30dp"
+        android:id="@+id/TV"
+        />
+
+    <ImageView
+        android:layout_width="136dp"
+        android:layout_height="105dp"
+        android:src="@drawable/batman"
+        android:id="@+id/imageView3"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/imageView2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView3"
+        android:paddingLeft="25dp"
+        android:paddingTop="40dp"
+        android:text="Drowning in Sea"
+        android:textSize="30dp"
+        />
+    <ImageView
+        android:layout_width="136dp"
+        android:layout_height="105dp"
+        android:src="@drawable/batman"
+        android:id="@+id/imageView4"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/imageView3"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_toRightOf="@+id/imageView4"
+        android:paddingLeft="25dp"
+        android:paddingTop="40dp"
+        android:text="Fire in Building"
+        android:textSize="30dp"
+        />
+    <ImageView
+        android:layout_width="136dp"
+        android:layout_height="105dp"
+        android:src="@drawable/batman"
+        android:id="@+id/imageView5"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/imageView4"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView4"
+        android:layout_toRightOf="@+id/imageView5"
+        android:paddingLeft="50dp"
+        android:paddingTop="40dp"
+        android:text="EarthQuake"
+        android:textSize="30dp"
+        />
+
+</RelativeLayout>
