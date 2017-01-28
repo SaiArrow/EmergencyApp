@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="FIRE"
+        android:textSize="40dp"
+        android:textColor="#ffffff"
+        android:background="@mipmap/images"
+        android:id="@+id/button"
+        android:layout_marginTop="52dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="40dp"
+        android:textColor="#800000"
+        android:text="TSUNAMI"
+        android:background="@mipmap/download"
+        android:id="@+id/button4"
+        android:layout_below="@+id/button"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginTop="28dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="TERROR ATTACK"
+        android:textSize="40dp"
+        android:textColor="#ffffff"
+        android:background="@mipmap/images2"
+        android:id="@+id/button5"
+        android:layout_below="@+id/button4"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_alignStart="@+id/button4"
+        android:layout_marginTop="29dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="FLOOD"
+        android:textSize="40dp"
+        android:textColor="#800000"
+        android:background="@mipmap/downloads"
+        android:id="@+id/button6"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/button5"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="40dp"
+        android:background="@mipmap/download23"
+        android:text="EARTHQUAKE"
+        android:textColor="#ffffff"
+        android:id="@+id/button7"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/button6"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
