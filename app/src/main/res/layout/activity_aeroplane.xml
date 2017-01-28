@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/md_light_blue_100"
     >
 
     <TextView
@@ -11,6 +12,8 @@
         android:text="@string/air"
         android:id="@+id/textView"
         android:textSize="15dp"
+        android:textColor="@color/md_black_1000"
+
         />
 
     <View
@@ -29,6 +32,8 @@
         android:id="@+id/textView1"
         android:textSize="15dp"
         android:layout_below="@+id/View"
+        android:textColor="@color/md_black_1000"
+
         />
     <View
         android:layout_width="448dp"
@@ -46,5 +51,7 @@
         android:id="@+id/textView2"
         android:textSize="15dp"
         android:layout_below="@+id/View1"
+        android:textColor="@color/md_black_1000"
+
         />
 </RelativeLayout>
