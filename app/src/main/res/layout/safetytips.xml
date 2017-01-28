@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="136dp"
         android:layout_height="105dp"
-        android:src="@drawable/batman"
+        android:src="@mipmap/cpr"
         android:id="@+id/imageView2"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -26,7 +26,7 @@
     <ImageView
         android:layout_width="136dp"
         android:layout_height="105dp"
-        android:src="@drawable/batman"
+        android:src="@mipmap/drown"
         android:id="@+id/imageView3"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -45,7 +45,7 @@
     <ImageView
         android:layout_width="136dp"
         android:layout_height="105dp"
-        android:src="@drawable/batman"
+        android:src="@mipmap/images45"
         android:id="@+id/imageView4"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -64,7 +64,7 @@
     <ImageView
         android:layout_width="136dp"
         android:layout_height="105dp"
-        android:src="@drawable/batman"
+        android:src="@mipmap/download56"
         android:id="@+id/imageView5"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
