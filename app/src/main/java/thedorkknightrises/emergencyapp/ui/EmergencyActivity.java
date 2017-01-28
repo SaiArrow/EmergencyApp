@@ -128,7 +128,7 @@ public class EmergencyActivity extends AppCompatActivity {
             }
 
             holder.text.setText(getChild(groupPosition, childPosition).toString());
-            //holder.text.setTextColor(Color.BLACK);
+            holder.text.setTextColor(Color.WHITE);
             holder.text.setAutoLinkMask(Linkify.PHONE_NUMBERS);
 
             return convertView;
