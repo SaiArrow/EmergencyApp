@@ -10,6 +10,8 @@
         android:text="@string/road"
         android:id="@+id/textView"
         android:textSize="15dp"
+        android:textColor="@color/md_black_1000"
+
         />
 
     <View
@@ -18,6 +20,8 @@
         android:background="@android:color/darker_gray"
         android:layout_alignBottom="@+id/textView"
         android:id="@+id/View1"
+        android:textColor="@color/md_black_1000"
+
         />
     <TextView
         android:paddingTop="20dp"
@@ -28,6 +32,8 @@
         android:id="@+id/textView11"
         android:textSize="15dp"
         android:layout_below="@+id/View1"
+        android:textColor="@color/md_black_1000"
+
         />
     <View
         android:layout_width="448dp"
