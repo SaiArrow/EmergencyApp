@@ -18,7 +18,7 @@
         android:layout_toRightOf="@+id/imageView2"
         android:paddingLeft="90dp"
         android:paddingTop="40dp"
-        android:text="CRP"
+        android:text="CPR"
         android:textSize="30dp"
         android:id="@+id/TV"
         />
