@@ -16,12 +16,31 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.SosActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.MainActivity2"
+            android:label="Main"
+            >
+        </activity>
+        <activity android:name=".ui.MainActivity"
+            android:label="SignIn"
+            >
+
+        </activity>
+        <activity android:name=".ui.EmergencyActivity"
+            android:label="Emergency Contacts"
+            >
+
+    </activity>
+        <activity android:name=".ui.feed.FeedActivity"
+            android:label="News Feed"
+            >
+
+    </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
