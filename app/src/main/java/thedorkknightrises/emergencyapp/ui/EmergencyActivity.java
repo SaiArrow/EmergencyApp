@@ -149,7 +149,7 @@ public class EmergencyActivity extends AppCompatActivity {
             }
 
             holder.text.setText(getGroup(groupPosition).toString());
-            holder.text.setTextColor(Color.BLACK);
+            holder.text.setTextColor(Color.WHITE);
 
             return convertView;
         }
