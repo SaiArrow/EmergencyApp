@@ -138,6 +138,14 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             longitude = mMap.getMyLocation().getLongitude();
             mMap.animateCamera(CameraUpdateFactory.zoomTo(13));
         }
+        if (getIntent().getAction().equals("SOS")) {
+            double lat = getIntent().getDoubleExtra("lat",0);
+            double lon = getIntent().getDoubleExtra("lon",0);
+            if (lat!=0 && lon!=0) {
+                latitude = lat;
+                longitude = lon;
+            }
+        }
         mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitude, longitude)));
     }
 

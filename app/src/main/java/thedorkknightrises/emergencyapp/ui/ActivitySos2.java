@@ -1,6 +1,5 @@
 package thedorkknightrises.emergencyapp.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -92,7 +91,9 @@ public class ActivitySos2 extends AppCompatActivity {
         }
         else {
             String user_name = user.getDisplayName();
-            SosData sosData = new SosData(user_name,"","",type);
+            String lat = getIntent().getStringExtra("latitude");
+            String lon = getIntent().getStringExtra("longitude");
+            SosData sosData = new SosData(user_name,lat,lon,type);
             HashMap<String, Object> sosHashmap = sosData.getHashMap();
             root = FirebaseDatabase.getInstance().getReference();
             String sosDatasKey = root.child(Constants.SOS_ROOT).push().getKey();
