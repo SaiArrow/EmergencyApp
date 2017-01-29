@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ import thedorkknightrises.emergencyapp.ui.maps.MapActivity;
 
 public class NotificationActivity extends AppCompatActivity {
 
+    Toolbar toolbar;
     RecyclerView recyclerView;
     DatabaseReference root;
     NotificationListAdapter adapter;
@@ -43,6 +45,12 @@ public class NotificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_notification);
 
         root = FirebaseDatabase.getInstance().getReference();
+
+        toolbar =(Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+
 
         no_item_textview =(TextView)findViewById(R.id.no_item_textview);
         recyclerView = (RecyclerView)findViewById(R.id.notification_recyclerView);
@@ -77,6 +85,8 @@ public class NotificationActivity extends AppCompatActivity {
                             intent.setAction("SOS");
                             intent.putExtra("lat",data.getUser_lat());
                             intent.putExtra("lon",data.getUser_long());
+                            intent.putExtra("type",data.getUser_type());
+                            intent.putExtra("name",data.getUser_name());
                             startActivity(intent);
 
                         }

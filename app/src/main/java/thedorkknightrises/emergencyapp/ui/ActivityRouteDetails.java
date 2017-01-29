@@ -13,6 +13,7 @@ public class ActivityRouteDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         String action = getIntent().getAction();
         if (action.equals("Road"))
             setContentView(R.layout.activity_road);
@@ -23,6 +24,9 @@ public class ActivityRouteDetails extends AppCompatActivity {
         }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
     }
 }

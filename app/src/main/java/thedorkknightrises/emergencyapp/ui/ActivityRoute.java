@@ -19,7 +19,9 @@ public class ActivityRoute extends AppCompatActivity {
         setContentView(R.layout.activity_route);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         ImageButton b1, b2, b3;
         b1 = (ImageButton) findViewById(R.id.imageButton2);
@@ -27,7 +29,7 @@ public class ActivityRoute extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent39 = new Intent(ActivityRoute.this, EmergencyActivity.class);
+                Intent myIntent39 = new Intent(ActivityRoute.this, ActivityRouteDetails.class);
                 myIntent39.setAction("Road");
                 startActivity(myIntent39);
 
@@ -40,7 +42,7 @@ public class ActivityRoute extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent39 = new Intent(ActivityRoute.this, EmergencyActivity.class);
+                Intent myIntent39 = new Intent(ActivityRoute.this, ActivityRouteDetails.class);
                 myIntent39.setAction("Plane");
                 startActivity(myIntent39);
 
@@ -56,7 +58,7 @@ public class ActivityRoute extends AppCompatActivity {
                               {
                                   @Override
                                   public void onClick(View view) {
-                                      Intent myIntent39 = new Intent(ActivityRoute.this, EmergencyActivity.class);
+                                      Intent myIntent39 = new Intent(ActivityRoute.this, ActivityRouteDetails.class);
                                       myIntent39.setAction("Railway");
                                       startActivity(myIntent39);
 

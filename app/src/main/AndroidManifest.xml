@@ -30,6 +30,9 @@
             android:theme="@style/AppTheme"
             >
         </activity>
+        <activity android:name=".ui.ActivityRouteDetails"
+            android:parentActivityName=".ui.ActivityRoute">
+        </activity>
         <activity android:name=".ui.MainActivity"
             android:label="SignIn"
             android:theme="@style/AppTheme"
