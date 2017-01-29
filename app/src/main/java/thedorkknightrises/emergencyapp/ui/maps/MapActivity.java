@@ -39,6 +39,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     double latitude = 20.5937, longitude = 78.9629;
     Spinner spinner;
     String types[] = {"hospital", "police", "fire_station"};
+    final int LOCATION_PERMISSION_CODE = 125;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,14 +104,26 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         mMap = googleMap;
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            //return;
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+                Toast.makeText(this, getText(R.string.location_permission_rationale), Toast.LENGTH_LONG).show();
+
+
+            } else {
+
+                // No explanation needed, we can request the permission.
+
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission_group.LOCATION}, LOCATION_PERMISSION_CODE);
+
+                // LOCATION_PERMISSION_CODE is an
+                // app-defined int constant. The callback method gets the
+                // result of the request.
+            }
             Toast.makeText(this, getText(R.string.location_access),Toast.LENGTH_LONG).show();
         } else mMap.setMyLocationEnabled(true);
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
@@ -230,6 +243,25 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                     markerOptions.title(placeName + " : " + vicinity);
                     googleMap.addMarker(markerOptions);
                 }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case LOCATION_PERMISSION_CODE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    onMapReady(mMap);
+
+                }
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
         }
     }
 }

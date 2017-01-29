@@ -17,6 +17,7 @@
     <string name="title_activity_register">Register</string>
     <string name="title_activity_session_manager">SessionManager</string>
     <string name="title_activity_about_ncw">AboutNCWActivity</string>
+    <string name="location_permission_rationale">The app requires your permission to accessyour location in order to upload it in case of an emergency</string>
 
     <string name="location_access">Location access not granted! Cannot show current location.</string>
     <string name="air2">3.Two Air India flights from Pune to New Delhi were cancelled for two successive days due to unspecified technical issues following which passengers were shifted to another flight this evening.
