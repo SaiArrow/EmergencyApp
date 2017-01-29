@@ -33,15 +33,16 @@
             >
 
         </activity>
+        <activity android:name=".ui.ActivityRoute"
+            android:label="Route Disruptions"
+            ></activity>
         <activity android:name=".ui.EmergencyActivity"
             android:label="Emergency Contacts"
             android:theme="@style/AppTheme"
             > </activity>
         <activity android:name=".ui.ActivitySos2"
-            android:label="SOS"
-            android:theme="@style/AppTheme"
-            >
-    </activity>
+            android:label="SOS Categories"
+            ></activity>
         <activity android:name=".ui.feed.FeedActivity"
             android:label="News Feed"
             android:theme="@style/AppTheme"
