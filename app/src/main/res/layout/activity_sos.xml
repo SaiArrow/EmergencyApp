@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
     <android.support.v7.widget.Toolbar
         android:id="@+id/activity_sos_toolbar"
         android:layout_width="match_parent"
@@ -21,8 +22,8 @@
         android:gravity="center">
 
         <ImageButton
-            android:layout_width="130dp"
-            android:layout_height="140dp"
+            android:layout_width="230dp"
+            android:layout_height="240dp"
             android:src="@drawable/sos"
             android:id="@+id/imageButton1"
             android:layout_marginBottom="85dp"
@@ -32,11 +33,17 @@
             android:scaleType="fitCenter"
             android:background="#00000000"/>
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:text="@string/emergency_contacts"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginBottom="35dp"
             android:id="@+id/button2"
+            android:textColor="#B7B7BC"
+            android:background="#CD2D1C"
+            android:textStyle="bold"
+            android:textSize="20dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
 
