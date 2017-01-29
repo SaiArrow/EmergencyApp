@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:clickable="true"
@@ -28,6 +29,7 @@
             android:id="@+id/info1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:text="SERVICES"
             android:padding="5dp"
             android:gravity="center_horizontal"
@@ -45,12 +47,13 @@
         card_view:cardCornerRadius="4dp"
         android:layout_below="@+id/card1"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="50dp"
         android:layout_alignParentRight="true">
 
         <TextView
             android:id="@+id/info2"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_height="match_parent"
             android:text="ROUTE DISRUPTION"
             android:padding="5dp"
@@ -68,7 +71,8 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="50dp"
+
         android:layout_below="@+id/card2"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true">
@@ -78,6 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="SAFE HOUSES"
+            android:layout_marginTop="10dp"
             android:padding="5dp"
             android:gravity="center_horizontal"
             android:textSize="30sp"
@@ -96,7 +101,8 @@
         android:layout_below="@+id/card4"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="50dp"
+        >
 
         <TextView
             android:id="@+id/info5"
@@ -104,6 +110,7 @@
             android:layout_height="match_parent"
             android:text="NOTIFICATIONS"
             android:padding="5dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:textSize="30sp"
             android:textStyle="bold"/>
