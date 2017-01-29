@@ -29,17 +29,7 @@ public class MainActivity2 extends AppCompatActivity
 
 
         CardView but,but1,but2;
-        but=(CardView)findViewById(R.id.card3);
 
-        but.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent3 = new Intent(MainActivity2.this,EmergencyActivity.class);
-                startActivity(myIntent3);
-
-
-            }
-        });
         but1=(CardView)findViewById(R.id.card1) ;
         but1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +106,11 @@ public class MainActivity2 extends AppCompatActivity
             startActivity(new Intent(this, EmergencyActivity.class));
         } else if (id == R.id.nav_feed) {
             startActivity(new Intent(this, FeedActivity.class));
+        }
+            else if(id == R.id.nav_help)
+        {
+            startActivity(new Intent(this, EmergencyActivity.class));
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
