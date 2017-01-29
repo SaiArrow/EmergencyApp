@@ -66,7 +66,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                     mMap.moveCamera(newLatLng(new LatLng(latitude, longitude)));
                     mMap.animateCamera(CameraUpdateFactory.zoomTo(13));
                     Log.d("MapActivity", "Search");
-                    //TODO: Type
                     String type =types[spinner.getSelectedItemPosition()-1];
                     StringBuilder googlePlacesUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
                     googlePlacesUrl.append("location=" + mMap.getMyLocation().getLatitude() + "," + mMap.getMyLocation().getLongitude());

@@ -44,39 +44,36 @@ public class ActivitySos2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 updateToFirebase("fire");
-
+                finish();
             }
         });
+
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateToFirebase("tsunami");
-
-
+                finish();
             }
         });
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateToFirebase("terror_attack");
-
-
+                finish();
             }
         });
         b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateToFirebase("flood");
-
-
+                finish();
             }
         });
         b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateToFirebase("earthquake");
-
-
+                finish();
             }
         });
     }
@@ -91,9 +88,9 @@ public class ActivitySos2 extends AppCompatActivity {
         }
         else {
             String user_name = user.getDisplayName();
-            String lat = getIntent().getStringExtra("latitude");
-            String lon = getIntent().getStringExtra("longitude");
-            SosData sosData = new SosData(user_name,lat,lon,type);
+            double lat = getIntent().getDoubleExtra("lat",0);
+            double lon = getIntent().getDoubleExtra("lon",0);
+            SosData sosData = new SosData(user_name,Double.toString(lat),Double.toString(lon),type);
             HashMap<String, Object> sosHashmap = sosData.getHashMap();
             root = FirebaseDatabase.getInstance().getReference();
             String sosDatasKey = root.child(Constants.SOS_ROOT).push().getKey();

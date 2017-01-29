@@ -1,7 +1,6 @@
 package thedorkknightrises.emergencyapp.ui;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,8 +15,6 @@ import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.IdpResponse;
 import com.firebase.ui.auth.ResultCodes;
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
-import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.firebase.auth.FirebaseAuth;
@@ -61,13 +58,15 @@ public class SosActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(activity, SOSMapActivity.class));
+                activity.finish();
+                /*try {
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-                try {
                     startActivityForResult(builder.build(activity), PLACE_PICKER_REQUEST);
                 } catch (GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
                     e.printStackTrace();
                     Toast.makeText((Context)activity, "Error fetching location", Toast.LENGTH_LONG).show();
-                }
+                }*/
             }
         });
 
@@ -136,7 +135,7 @@ public class SosActivity extends AppCompatActivity {
                 Place place = PlacePicker.getPlace(this, data);
                 String toastMsg = String.format("Place: %s", place.getName());
                 Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
-                Intent myIntent99 = new Intent(SosActivity.this, ActivitySos2.class);
+                Intent myIntent99 = new Intent(SosActivity.this, SOSMapActivity.class);
                 myIntent99.putExtra("latitude", place.getLatLng().latitude);
                 myIntent99.putExtra("longitude", place.getLatLng().longitude);
                 startActivity(myIntent99);

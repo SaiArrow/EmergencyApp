@@ -11,6 +11,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -23,10 +24,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import thedorkknightrises.emergencyapp.R;
 
+import static com.google.android.gms.maps.CameraUpdateFactory.newLatLng;
+
 public class SOSMapActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
 
     private GoogleMap mMap;
-    double latitude, longitude;
+    double latitude = 20.5937, longitude = 78.9629;
     private int LOCATION_PERMISSION_CODE = 125;
 
     @Override
@@ -37,16 +40,6 @@ public class SOSMapActivity extends FragmentActivity implements OnMapReadyCallba
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        final Context context = this;
-        findViewById(R.id.send).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(context, ActivitySos2.class);
-                i.putExtra("lat", latitude);
-                i.putExtra("lon", longitude);
-                startActivity(i);
-            }
-        });
     }
 
 
@@ -91,30 +84,33 @@ public class SOSMapActivity extends FragmentActivity implements OnMapReadyCallba
         String bestProvider = locationManager.getBestProvider(criteria, true);
         if (mMap.getMyLocation() != null) {
             onLocationChanged(mMap.getMyLocation());
-        }
-        locationManager.requestLocationUpdates(bestProvider, 20000, 0, this);
-        if (mMap.getMyLocation() != null) {
             latitude = mMap.getMyLocation().getLatitude();
             longitude = mMap.getMyLocation().getLongitude();
+            Log.d("LOCATION", latitude+","+longitude);
             mMap.animateCamera(CameraUpdateFactory.zoomTo(13));
         }
-        if (getIntent().getAction()!= null && getIntent().getAction().equals("SOS")) {
-            double lat = getIntent().getDoubleExtra("lat",0);
-            double lon = getIntent().getDoubleExtra("lon",0);
-            if (lat!=0 && lon!=0) {
-                MarkerOptions markerOptions = new MarkerOptions();
-                LatLng latLng = new LatLng(lat, lon);
-                markerOptions.position(latLng);
-                if (getIntent().getStringExtra("type") != null)
-                    markerOptions.title(getIntent().getStringExtra("type"));
-                mMap.addMarker(markerOptions);
+        locationManager.requestLocationUpdates(bestProvider, 20000, 0, this);
+        final Context context = this;
+        findViewById(R.id.send).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, ActivitySos2.class);
+                i.putExtra("lat", latitude);
+                i.putExtra("lon", longitude);
+                startActivity(i);
             }
-        }
+        });
     }
 
     @Override
     public void onLocationChanged(Location location) {
-
+        latitude = location.getLatitude();
+        longitude = location.getLongitude();
+        LatLng latLng = new LatLng(latitude, longitude);
+        mMap.addMarker(new MarkerOptions().position(latLng));
+        mMap.moveCamera(newLatLng(latLng));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(13));
+        Log.d("LOCATION", latitude+","+longitude);
     }
 
     @Override
