@@ -4,17 +4,17 @@
     <group>
         <item
             android:id="@+id/nav_safety"
-            android:icon="@drawable/safety"
+            android:icon="@drawable/ic_clear_all_white_36px"
             android:title="@string/safety_tips"
             />
         <item
-            android:id="@+id/nav_emergency_contacts"
-            android:icon="@drawable/pec"
-            android:title="@string/emergency_contacts" />
-        <item
             android:id="@+id/nav_feed"
-            android:icon="@drawable/news"
+            android:icon="@drawable/ic_library_books_white_36px"
             android:title="@string/newsfeed" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_phone_white_36px"
+            android:title="@string/emergency_contacts" />
     </group>
 
 

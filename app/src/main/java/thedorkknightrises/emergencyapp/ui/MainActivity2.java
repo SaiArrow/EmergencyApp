@@ -107,10 +107,7 @@ public class MainActivity2 extends AppCompatActivity
 
         if (id == R.id.nav_safety) {
             startActivity(new Intent(this, SafetyActivity.class));
-        } else if (id == R.id.nav_emergency_contacts) {
-            //TODO: Add Personal Emergency Contacts
-            startActivity(new Intent(this, EmergencyActivity.class));
-        } else if (id == R.id.nav_feed) {
+        }  else if (id == R.id.nav_feed) {
             startActivity(new Intent(this, FeedActivity.class));
         }
             else if(id == R.id.nav_help)
