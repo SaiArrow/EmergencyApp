@@ -45,9 +45,27 @@
         <activity android:name=".ui.feed.FeedActivity"
             android:label="News Feed"
             android:theme="@style/AppTheme"
-            >
-
-    </activity>
+            android:parentActivityName=".ui.MainActivity2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity2" />
+        </activity>
+        <activity android:name=".ui.feed.FeedEvent"
+            android:theme="@style/AppTheme"
+            android:label="Event Feed"
+            android:parentActivityName=".ui.feed.FeedActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.feed.FeedActivity" />
+        </activity>
+        <activity android:name=".ui.SafetyActivity"
+            android:label="Safety Tips"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".ui.MainActivity2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity2" />
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -63,10 +81,7 @@
         <activity
             android:name=".ui.maps.MapActivity"
             android:label="@string/title_activity_map"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".ui.SignInActivity"
-            android:parentActivityName=".ui.MainActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/Theme.AppCompat.Light"/>
 
     </application>
 

@@ -9,10 +9,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.firebase.ui.auth.AuthUI;
+import com.firebase.ui.auth.ErrorCodes;
+import com.firebase.ui.auth.IdpResponse;
+import com.firebase.ui.auth.ResultCodes;
+import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Arrays;
+
 import thedorkknightrises.emergencyapp.R;
 
 public class SosActivity extends AppCompatActivity {
-
+    private final int RC_SIGN_IN =123;
+    FirebaseAuth auth;
     Button button;
     ImageButton button4;
     ImageButton butto;
@@ -25,6 +34,8 @@ public class SosActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.svg_clear_white_36px);
 
         button=(Button)findViewById(R.id.button2);
@@ -32,9 +43,8 @@ public class SosActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(SosActivity.this,EmergencyActivity.class);
+                Intent myIntent = new Intent(SosActivity.this, EmergencyActivity.class);
                 startActivity(myIntent);
-
 
             }
         });
@@ -52,6 +62,7 @@ public class SosActivity extends AppCompatActivity {
 
 
 
+        auth = FirebaseAuth.getInstance();
 
     }
 
@@ -59,10 +70,63 @@ public class SosActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case android.R.id.home:
-                Intent myIntent2 = new Intent(SosActivity.this,SignInActivity.class);
+                /*Intent myIntent2 = new Intent(SosActivity.this, SignInActivity.class);
                 startActivity(myIntent2);
+                finish();*/
+                if(isUserSignedIn())
+                    startActivity(new Intent(this, MainActivity2.class));
+                else {
+                    startActivityForResult(
+                            AuthUI.getInstance()
+                                    .createSignInIntentBuilder()
+                                    .setIsSmartLockEnabled(false)
+                                    .setTheme(R.style.AppTheme_SignIn)
+                                    .setProviders(Arrays.asList(
+                                            new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
+                                            new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
+                                    .build(),RC_SIGN_IN);
+                }
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // RC_SIGN_IN is the request code you passed into startActivityForResult(...) when starting the sign in flow.
+        if (requestCode == RC_SIGN_IN) {
+            IdpResponse response = IdpResponse.fromResultIntent(data);
+
+            // Successfully signed in
+            if (resultCode == ResultCodes.OK) {
+                //startActivity(SignedInActivity.createIntent(this, response));
+                finish();
+                return;
+            } else {
+                // Sign in failed
+                if (response == null) {
+                    // User pressed back button
+                    //  showSnackbar(R.string.sign_in_cancelled);
+                    return;
+                }
+
+                if (response.getErrorCode() == ErrorCodes.NO_NETWORK) {
+                    //    showSnackbar(R.string.no_internet_connection);
+                    return;
+                }
+
+                if (response.getErrorCode() == ErrorCodes.UNKNOWN_ERROR) {
+                    //      showSnackbar(R.string.unknown_error);
+                    return;
+                }
+            }
+            //showSnackbar(R.string.unknown_sign_in_response);
+        }
+    }
+
+    private boolean isUserSignedIn(){
+        //to check if the user is signed in
+        if(auth.getCurrentUser() != null) return true;
+        else return false;
     }
 }

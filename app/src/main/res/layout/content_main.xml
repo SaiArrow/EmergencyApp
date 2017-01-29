@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@drawable/backg"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="4dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="thedorkknightrises.emergencyapp.ui.MainActivity2"
     tools:showIn="@layout/app_bar_main">
@@ -18,11 +17,10 @@
         android:id="@+id/card1"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="23dp"
         android:clickable="true"
         android:layout_alignParentRight="true">
 
@@ -34,12 +32,7 @@
             android:padding="5dp"
             android:gravity="center_horizontal"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="#0000FF"/>
-
-
-
-
+            android:textStyle="bold"/>
 
     </android.support.v7.widget.CardView>
 
@@ -48,11 +41,11 @@
         android:id="@+id/card2"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
         android:layout_below="@+id/card1"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="4dp"
         android:layout_alignParentRight="true">
 
         <TextView
@@ -63,8 +56,7 @@
             android:padding="5dp"
             android:gravity="center_horizontal"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="#0000FF"/>
+            android:textStyle="bold"/>
 
 
     </android.support.v7.widget.CardView>
@@ -74,9 +66,9 @@
         android:id="@+id/card3"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="4dp"
         android:layout_below="@+id/card4"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true">
@@ -89,8 +81,7 @@
             android:gravity="center_horizontal"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:text="EMERGENCY CONTACT"
-            android:textColor="#0000FF"/>
+            android:text="EMERGENCY CONTACT"/>
 
 
     </android.support.v7.widget.CardView>
@@ -100,9 +91,9 @@
         android:id="@+id/card4"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="4dp"
         android:layout_below="@+id/card2"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true">
@@ -115,8 +106,7 @@
             android:padding="5dp"
             android:gravity="center_horizontal"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="#0000FF"/>
+            android:textStyle="bold"/>
 
 
     </android.support.v7.widget.CardView>
@@ -126,12 +116,12 @@
         android:id="@+id/card5"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
         android:layout_below="@+id/card3"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="35dp">
+        android:layout_marginTop="4dp">
 
         <TextView
             android:id="@+id/info5"
@@ -141,8 +131,7 @@
             android:padding="5dp"
             android:gravity="center_horizontal"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="#0000FF"/>
+            android:textStyle="bold"/>
 
     </android.support.v7.widget.CardView>
 

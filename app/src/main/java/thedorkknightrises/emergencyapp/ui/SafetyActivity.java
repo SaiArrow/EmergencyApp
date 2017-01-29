@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -22,30 +23,32 @@ public class SafetyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.safetytips);
 
-        img=(ImageView) findViewById(R.id.imageView2);
-        img.setOnClickListener(new View.OnClickListener() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_news);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        toolbar.setTitle("Safety Tips");
+
+        findViewById(R.id.cpr).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=pwyOCAt5FNc"));
                 context.startActivity(i);
             }});
-        img1=(ImageView) findViewById(R.id.imageView3);
-        img1.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.drown).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=RE8Iy9BsU_M"));
                 context.startActivity(i);
             }});
-        img2=(ImageView) findViewById(R.id.imageView4);
-        img2.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fire).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=YKgIYadRGjA"));
                 context.startActivity(i);
             }});
-
-        img3=(ImageView) findViewById(R.id.imageView5);
-        img3.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.earth).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=G57gCZGEPK0"));

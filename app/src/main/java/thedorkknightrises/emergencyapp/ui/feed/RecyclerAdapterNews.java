@@ -11,11 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import thedorkknightrises.emergencyapp.R;
-
 import java.util.ArrayList;
+
+import thedorkknightrises.emergencyapp.R;
 
 
 
@@ -35,32 +36,38 @@ public class RecyclerAdapterNews extends RecyclerView.Adapter<RecyclerAdapterNew
     public NewsRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View itemView = inflater.inflate(R.layout.recycler_news_item, parent, false);
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, FeedEvent.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
-            }
-        });
 
         return new NewsRecyclerViewHolder(itemView);
     }
 
 
     @Override
-    public void onBindViewHolder(final NewsRecyclerViewHolder holder, int position) {
+    public void onBindViewHolder(final NewsRecyclerViewHolder holder, final int position) {
         //set layout resources here from arraylist
         holder.tvTitle.setText(arrayList.get(position).getTitle());
         holder.imgNews.setImageResource(arrayList.get(position).getImageId());
         holder.tvExcerpt.setText(arrayList.get(position).getExcerpt());
-        holder.tvTitle.setOnClickListener(new View.OnClickListener() {
+        holder.imgNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String clicked_tv=holder.tvTitle.getText().toString();
+                Intent intent = new Intent(context, FeedEvent.class);
+                intent.putExtra("title", clicked_tv);
+                intent.putExtra("desc", holder.tvExcerpt.getText().toString());
+                intent.putExtra("image", arrayList.get(position).getImageId());
+                System.out.println(clicked_tv);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
+        holder.event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String clicked_tv=holder.tvTitle.getText().toString();
                 Intent intent = new Intent(context, FeedEvent.class);
-                intent.putExtra("title",clicked_tv);
-                intent.putExtra("desc",holder.tvExcerpt.getText().toString());
+                intent.putExtra("title", clicked_tv);
+                intent.putExtra("desc", holder.tvExcerpt.getText().toString());
+                intent.putExtra("image", arrayList.get(position).getImageId());
                 System.out.println(clicked_tv);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
@@ -79,14 +86,16 @@ public class RecyclerAdapterNews extends RecyclerView.Adapter<RecyclerAdapterNew
         ImageView imgNews;
         TextView tvTitle;
         TextView tvExcerpt;
+        LinearLayout event;
 
 
         NewsRecyclerViewHolder(View itemView) {
             super(itemView);
 
-            ImageView imgNews = (ImageView) itemView.findViewById(R.id.img_news) ;
-            TextView tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
-            TextView tvExcerpt = (TextView) itemView.findViewById(R.id.tv_excerpt);
+            imgNews = (ImageView) itemView.findViewById(R.id.img_news) ;
+            tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
+            tvExcerpt = (TextView) itemView.findViewById(R.id.tv_excerpt);
+            event = (LinearLayout) itemView.findViewById(R.id.event);
 
         }
     }

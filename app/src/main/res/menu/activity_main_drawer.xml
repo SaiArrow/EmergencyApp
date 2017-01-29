@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group>
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/icon"
+            android:id="@+id/nav_safety"
+            android:icon="@drawable/ic_cancel"
             android:title="Safety Tips" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/icon"
+            android:id="@+id/nav_emergency_contacts"
+            android:icon="@drawable/ic_cancel"
             android:title="Personal Emergency Contacts" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/icon"
+            android:id="@+id/nav_feed"
+            android:icon="@drawable/ic_cancel"
             android:title="Newsfeed" />
     </group>
 

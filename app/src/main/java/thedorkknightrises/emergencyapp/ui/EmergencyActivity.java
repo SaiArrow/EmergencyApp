@@ -39,9 +39,8 @@ public class EmergencyActivity extends AppCompatActivity {
             groups = new String[]{"Child Helpline","Police","Fire","Ambulance","Emergency Disaster Management","Women in Distress (Delhi)","Emergency medical service in local area","Central Accident and Trauma Services"};
 
             children = new String[][]
-                    {{"Childline India Foundation HO\n"+"1 review · Non-Profit Organization\n" + "11.5 km · 4th Floor, Sumer Kendra, HR Devrukhkar Marg\n" +
-                            "022 2388 1098","Childline India Foundation\n"+"No reviews · Child Social Service Organization\n" +"12.7 km · 2nf Floor,Unit No.204/A,Parvati Industrial Estate,New Sun Mills Compound, Senapati Bapat Marg\n" +
-                            "022 2498 9630"}, {"100"},{"101"},{"102"},{"108"},{"181"},{"1099"},{"1056"}};
+                    {{"Childline India Foundation HO\n"+ "022 2388 1098",
+                            "Childline India Foundation\n"+ "022 2498 9630"}, {"100"},{"101"},{"102"},{"108"},{"181"},{"1099"},{"1056"}};
 
 
         faqListView.setAdapter(new ExpandableListAdapter(groups, children));

@@ -9,7 +9,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:padding="4dp"
+        android:scaleType="fitCenter"
         />
 
     <LinearLayout
@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="3"
         android:orientation="vertical"
-        android:padding="4dp">
+        android:padding="4dp"
+        android:id="@+id/event">
 
         <TextView
             android:id="@+id/tv_title"
