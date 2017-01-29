@@ -58,9 +58,7 @@ All flights arriving to and departing from Mumbai have been delayed. Also, all t
     <string name="road2">3.Two persons were killed and three others injured in a freak accident that involved an explosion in a moving chemical tanker and
 subsequent pile-up of three vehicles on the Mumbai-Ahmedabad Highway today, causing massive disruption of traffic for hours.
 Railway</string>
-
-
-
+    <string name="title_activity_sosmap">Map</string>
 
 
 </resources>

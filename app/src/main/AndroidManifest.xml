@@ -9,7 +9,7 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <application
         android:allowBackup="true"
@@ -19,56 +19,57 @@
         <activity android:name=".ui.SosActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Notifications.NotificationActivity"
-            android:parentActivityName=".ui.MainActivity2"/>
-
-        <activity android:name=".ui.MainActivity2"
+        <activity
+            android:name=".ui.Notifications.NotificationActivity"
+            android:parentActivityName=".ui.MainActivity2" />
+        <activity
+            android:name=".ui.MainActivity2"
             android:label="Main"
-            android:theme="@style/AppTheme"
-            >
-        </activity>
-        <activity android:name=".ui.ActivityRouteDetails"
-            android:parentActivityName=".ui.ActivityRoute">
-        </activity>
-        <activity android:name=".ui.MainActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.ActivityRouteDetails"
+            android:parentActivityName=".ui.ActivityRoute"></activity>
+        <activity
+            android:name=".ui.MainActivity"
             android:label="SignIn"
-            android:theme="@style/AppTheme"
-            >
-
-        </activity>
-        <activity android:name=".ui.ActivityRoute"
-            android:label="Route Disruptions"
-            ></activity>
-        <activity android:name=".ui.EmergencyActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.ActivityRoute"
+            android:label="Route Disruptions" />
+        <activity
+            android:name=".ui.EmergencyActivity"
             android:label="Emergency Contacts"
-            android:theme="@style/AppTheme"
-            > </activity>
-        <activity android:name=".ui.ActivitySos2"
-            android:label="SOS Categories"
-            ></activity>
-        <activity android:name=".ui.feed.FeedActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.ActivitySos2"
+            android:label="SOS Categories" />
+        <activity
+            android:name=".ui.feed.FeedActivity"
             android:label="News Feed"
-            android:theme="@style/AppTheme"
-            android:parentActivityName=".ui.MainActivity2">
+            android:parentActivityName=".ui.MainActivity2"
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity2" />
         </activity>
-        <activity android:name=".ui.feed.FeedEvent"
-            android:theme="@style/AppTheme"
+        <activity
+            android:name=".ui.feed.FeedEvent"
             android:label="Event Feed"
-            android:parentActivityName=".ui.feed.FeedActivity">
+            android:parentActivityName=".ui.feed.FeedActivity"
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.feed.FeedActivity" />
         </activity>
-        <activity android:name=".ui.SafetyActivity"
+        <activity
+            android:name=".ui.SafetyActivity"
             android:label="Safety Tips"
-            android:theme="@style/AppTheme"
-            android:parentActivityName=".ui.MainActivity2">
+            android:parentActivityName=".ui.MainActivity2"
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity2" />
@@ -88,8 +89,10 @@
         <activity
             android:name=".ui.maps.MapActivity"
             android:label="@string/title_activity_map"
-            android:theme="@style/Theme.AppCompat.Light"/>
-
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.SOSMapActivity"
+            android:label="@string/title_activity_sosmap"></activity>
     </application>
 
 </manifest>
