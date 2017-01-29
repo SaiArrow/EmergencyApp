@@ -7,11 +7,12 @@
     <TextView
         android:paddingTop="20dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/air"
         android:id="@+id/textView"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textColor="@color/md_black_1000"
 
         />
@@ -26,11 +27,12 @@
     <TextView
         android:paddingTop="20dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/air1"
         android:id="@+id/textView1"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:layout_below="@+id/View"
         android:textColor="@color/md_black_1000"
 
@@ -45,11 +47,12 @@
     <TextView
         android:paddingTop="20dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/air2"
         android:id="@+id/textView2"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:layout_below="@+id/View1"
         android:textColor="@color/md_black_1000"
 

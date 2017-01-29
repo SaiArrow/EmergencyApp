@@ -1,6 +1,24 @@
 <resources>
     <string name="app_name">Emergency App</string>
     <string name="title_activity_map">Map</string>
+    <string name="news">News</string>
+    <string name="title">Title</string>
+    <string name="emergency_contacts">Helpline</string>
+    <string name="safety_tips">Safety Tips</string>
+    <string name="personal_contacts">Emergency Contacts</string>
+    <string name="newsfeed">Newsfeed</string>
+    <string name="services">Services</string>
+    <string name="fire">Fire</string>
+    <string name="flood">Flood</string>
+    <string name="tsunami">Tsunami</string>
+    <string name="terror">Terror Attack</string>
+    <string name="route">Traffic Diversions</string>
+    <string name="earthquake">Earthquake</string>
+    <string name="safe_house">Safe Locations</string>
+    <string name="notifications">Notifications</string>
+    <string name="cpr">CPR</string>
+    <string name="drowning">Drowning in Sea</string>
+    <string name="building">Fire in Building</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

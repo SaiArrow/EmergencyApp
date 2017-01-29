@@ -26,15 +26,17 @@
                 android:layout_height="105dp"
                 android:src="@mipmap/cpr"
                 android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="10dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="90dp"
+                android:paddingRight="90dp"
                 android:paddingTop="40dp"
-                android:text="CPR"
-                android:textSize="30dp"
+                android:text="@string/cpr"
+                android:textSize="30sp"
                 android:id="@+id/TV"
                 />
         </LinearLayout>
@@ -55,16 +57,17 @@
             android:src="@mipmap/drown"
             android:id="@+id/imageView3"
             android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:paddingTop="10dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="25dp"
+            android:paddingRight="25dp"
             android:paddingTop="40dp"
-            android:text="Drowning in Sea"
-            android:textSize="30dp"
-            />
+            android:text="@string/drowning"
+            android:textSize="30sp" />
     </LinearLayout>
     </android.support.v7.widget.CardView>
 
@@ -83,18 +86,17 @@
             android:src="@mipmap/images45"
             android:id="@+id/imageView4"
             android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:paddingTop="10dp"
-            android:layout_below="@+id/imageView3"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView3"
-            android:layout_toRightOf="@+id/imageView4"
             android:paddingLeft="25dp"
+            android:paddingRight="25dp"
             android:paddingTop="40dp"
-            android:text="Fire in Building"
-            android:textSize="30dp"
+            android:text="@string/building"
+            android:textSize="30sp"
             />
     </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -114,19 +116,17 @@
             android:src="@mipmap/download56"
             android:id="@+id/imageView5"
             android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:paddingTop="10dp"
-            android:layout_below="@+id/imageView4"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView4"
-            android:layout_toRightOf="@+id/imageView5"
             android:paddingLeft="50dp"
+            android:paddingRight="50dp"
             android:paddingTop="40dp"
-            android:text="EarthQuake"
-            android:textSize="30dp"
-            />
+            android:text="@string/earthquake"
+            android:textSize="30sp" />
     </LinearLayout>
     </android.support.v7.widget.CardView>
 

@@ -5,19 +5,19 @@
         <item
             android:id="@+id/nav_safety"
             android:icon="@drawable/safety"
-            android:title="Safety Tips" />
+            android:title="@string/safety_tips" />
         <item
             android:id="@+id/nav_emergency_contacts"
             android:icon="@drawable/pec"
-            android:title="Personal Emergency Contacts" />
+            android:title="@string/personal_contacts" />
         <item
             android:id="@+id/nav_feed"
             android:icon="@drawable/news"
-            android:title="Newsfeed" />
+            android:title="@string/newsfeed" />
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/help"
-            android:title="Helpline" />
+            android:title="@string/emergency_contacts" />
     </group>
 
 

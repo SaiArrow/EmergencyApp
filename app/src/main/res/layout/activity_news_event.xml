@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="News"
+            android:text="@string/news"
             android:textSize="20dp"
             android:layout_gravity="left"
             android:textColor="@color/md_white_400"
@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="@string/title"
             android:id="@+id/news_title"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
