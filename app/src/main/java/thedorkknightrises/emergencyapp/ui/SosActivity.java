@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.ErrorCodes;
@@ -96,7 +97,7 @@ public class SosActivity extends AppCompatActivity {
         // RC_SIGN_IN is the request code you passed into startActivityForResult(...) when starting the sign in flow.
         if (requestCode == RC_SIGN_IN) {
             IdpResponse response = IdpResponse.fromResultIntent(data);
-
+            Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show();
             // Successfully signed in
             if (resultCode == ResultCodes.OK) {
                 //startActivity(SignedInActivity.createIntent(this, response));
