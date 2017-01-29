@@ -12,9 +12,10 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="thedorkknightrises.emergencyapp.ui.MainActivity2"
     tools:showIn="@layout/app_bar_main">
-<RelativeLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="4dp"
     android:paddingRight="4dp"
@@ -27,10 +28,7 @@
         android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
         android:layout_marginTop="4dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:clickable="true"
-        android:layout_alignParentRight="true">
+        android:clickable="true">
 
         <TextView
             android:id="@+id/info1"
@@ -52,10 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
-        android:layout_below="@+id/card1"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="4dp"
-        android:layout_alignParentRight="true">
+        android:layout_marginTop="4dp">
 
         <TextView
             android:id="@+id/info2"
@@ -71,32 +66,6 @@
 
     </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-
-        android:id="@+id/card4"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        card_view:cardCornerRadius="4dp"
-        android:layout_marginTop="4dp"
-
-        android:layout_below="@+id/card2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true">
-
-        <TextView
-            android:id="@+id/info4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:text="@string/safe_house"
-            android:padding="5dp"
-            android:gravity="center_horizontal"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
-
-
-    </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
 
@@ -105,9 +74,6 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         card_view:cardCornerRadius="4dp"
-        android:layout_below="@+id/card4"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_marginTop="4dp"
         >
 
@@ -125,5 +91,5 @@
     </android.support.v7.widget.CardView>
 
 
-</RelativeLayout>
+</LinearLayout>
 </ScrollView>

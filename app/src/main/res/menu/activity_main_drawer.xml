@@ -10,15 +10,11 @@
         <item
             android:id="@+id/nav_emergency_contacts"
             android:icon="@drawable/pec"
-            android:title="@string/personal_contacts" />
+            android:title="@string/emergency_contacts" />
         <item
             android:id="@+id/nav_feed"
             android:icon="@drawable/news"
             android:title="@string/newsfeed" />
-        <item
-            android:id="@+id/nav_help"
-            android:icon="@drawable/help"
-            android:title="@string/emergency_contacts" />
     </group>
 
 

@@ -33,6 +33,8 @@ import java.util.List;
 
 import thedorkknightrises.emergencyapp.R;
 
+import static com.google.android.gms.maps.CameraUpdateFactory.newLatLng;
+
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
 
     private GoogleMap mMap;
@@ -61,7 +63,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                 if (mMap.getMyLocation() != null) {
                     latitude = mMap.getMyLocation().getLatitude();
                     longitude = mMap.getMyLocation().getLongitude();
-                    mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitude, longitude)));
+                    mMap.moveCamera(newLatLng(new LatLng(latitude, longitude)));
                     mMap.animateCamera(CameraUpdateFactory.zoomTo(13));
                     Log.d("MapActivity", "Search");
                     //TODO: Type
@@ -138,15 +140,18 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             longitude = mMap.getMyLocation().getLongitude();
             mMap.animateCamera(CameraUpdateFactory.zoomTo(13));
         }
-        if (getIntent().getAction().equals("SOS")) {
+        if (getIntent().getAction()!= null && getIntent().getAction().equals("SOS")) {
             double lat = getIntent().getDoubleExtra("lat",0);
             double lon = getIntent().getDoubleExtra("lon",0);
             if (lat!=0 && lon!=0) {
-                latitude = lat;
-                longitude = lon;
+                MarkerOptions markerOptions = new MarkerOptions();
+                LatLng latLng = new LatLng(lat, lon);
+                markerOptions.position(latLng);
+                if (getIntent().getStringExtra("type") != null)
+                markerOptions.title(getIntent().getStringExtra("type"));
+                mMap.addMarker(markerOptions);
             }
         }
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitude, longitude)));
     }
 
     @Override
@@ -155,7 +160,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         longitude = location.getLongitude();
         LatLng latLng = new LatLng(latitude, longitude);
         mMap.addMarker(new MarkerOptions().position(latLng));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        mMap.moveCamera(newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(13));
     }
 
