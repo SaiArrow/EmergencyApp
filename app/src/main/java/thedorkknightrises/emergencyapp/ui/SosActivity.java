@@ -109,7 +109,7 @@ public class SosActivity extends AppCompatActivity {
             // Successfully signed in
             if (resultCode == ResultCodes.OK) {
                 //startActivity(SignedInActivity.createIntent(this, response));
-                finish();
+                startActivity(new Intent(SosActivity.this,MainActivity2.class));
                 return;
             } else {
                 // Sign in failed

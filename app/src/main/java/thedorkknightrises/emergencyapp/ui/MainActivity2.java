@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import thedorkknightrises.emergencyapp.R;
+import thedorkknightrises.emergencyapp.ui.Notifications.NotificationActivity;
 import thedorkknightrises.emergencyapp.ui.feed.FeedActivity;
 import thedorkknightrises.emergencyapp.ui.maps.MapActivity;
 
@@ -57,7 +58,9 @@ public class MainActivity2 extends AppCompatActivity
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Notifications",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity2.this, NotificationActivity.class);
+                startActivity(i);
+                //Toast.makeText(getApplicationContext(),"Notifications",Toast.LENGTH_SHORT).show();
             }
         });
 

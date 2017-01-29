@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "108411675513-uag3nds48t0kvd8fsoso6vb2863720el.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "thedorkknightrises.emergencyapp",
+            "certificate_hash": "2021B1789947BE2324A505A2C9D56A31BA29B684"
+          }
+        },
+        {
           "client_id": "108411675513-doircd3nspqf3bupnq1qojtj9v7o3smp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
