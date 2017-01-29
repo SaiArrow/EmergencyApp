@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import thedorkknightrises.emergencyapp.R;
 import thedorkknightrises.emergencyapp.ui.feed.FeedActivity;
@@ -28,7 +29,7 @@ public class MainActivity2 extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-        CardView but,but1,but2;
+        CardView but,but1,but2,card5;
 
         but1=(CardView)findViewById(R.id.card1) ;
         but1.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +42,7 @@ public class MainActivity2 extends AppCompatActivity
             }
         });
 
-        but2=(CardView)findViewById(R.id.card1) ;
+        but2=(CardView)findViewById(R.id.card2) ;
         but2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +50,14 @@ public class MainActivity2 extends AppCompatActivity
                 startActivity(myIntent4);
 
 
+            }
+        });
+
+        card5 = (CardView)findViewById(R.id.card5);
+        card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Notifications",Toast.LENGTH_SHORT).show();
             }
         });
 
